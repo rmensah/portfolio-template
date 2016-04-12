@@ -1,0 +1,15 @@
+{
+  "name": "materialx",
+  "version": "1.0.0",
+  "description": "Portfolio Site for Richard Mensah",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Richard Mensah",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
