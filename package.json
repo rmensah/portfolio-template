@@ -1,8 +1,8 @@
 {
-  "name": "materialx",
+  "name": "portfolio-template",
   "version": "1.0.0",
   "description": "Portfolio Site for Richard Mensah",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
