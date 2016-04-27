@@ -773,7 +773,7 @@ $('#contactForm').on('submit', function(e){
 		}, 1000);
 
 	}).fail(function(){
-		sweetAlert("Oops...", "Something went wrong, Try again later!", "error");
+		sweetAlert("Sorry...", "Upgrading Email Service, kindly email me at richard@richardmensah.site. Thanks!", "error");
 		var hand = setTimeout(function(){
 			loader.hide();
 			submitBtn.removeAttr('disabled');
