@@ -12,8 +12,10 @@ var nodemailer = require('nodemailer');
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
+// app.set('port', process.env.PORT || 3000);
+// app.set('views', path.join(__dirname, 'views'));
+
+/*
 app.set('view engine', 'jade');
 // app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -28,6 +30,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+*/
+
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.post('/contact', function (req, res) {
@@ -36,14 +40,14 @@ app.post('/contact', function (req, res) {
     smtpConfig = nodemailer.createTransport('SMTP', {
 		service: 'Gmail',
 		auth: {
-		user: "enterUrGmailIdHere@gmail.com",
+		user: "richard.mensah000@gmail.com",
 		pass: "EnterUrPasswordHere"
     }
     });
     //construct the email sending module
     mailOpts = {
 		from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-		to: 'enterUrGmailIdHere@gmail.com',
+		to: 'richard.mensah000@gmail.com',
 		subject: 'Website contact form',
 		text: req.body.message
     };
@@ -55,7 +59,7 @@ app.post('/contact', function (req, res) {
     }
     //email send sucessfully
     else {
-     res.end("Email send sucessfully");
+     res.end("Email sent sucessfully");
     }
     });
     });
